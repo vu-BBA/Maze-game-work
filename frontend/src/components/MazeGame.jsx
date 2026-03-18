@@ -583,7 +583,9 @@ function MazeGame() {
           <div 
             className="maze-grid"
             style={{ 
-              gridTemplateColumns: `repeat(${gameState?.maze?.[0]?.length || 10}, 1fr)` 
+              gridTemplateColumns: `repeat(${gameState?.maze?.[0]?.length || 10}, 1fr)`,
+              maxWidth: '100%',
+              overflowX: 'auto'
             }}
           >
             {gameState?.maze?.map((row, y) =>
